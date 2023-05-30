@@ -2,9 +2,14 @@ package org.example;
 
 public class Sauce {
 
-    private String sauceName;
+    private SauceType sauceName;
 
-    public String getSauceName() {
+    public Sauce(SauceType sauceName) {
+        this.sauceName = sauceName;
+    }
+
+    public SauceType getSauceName() {
         return sauceName;
     }
 }
+
