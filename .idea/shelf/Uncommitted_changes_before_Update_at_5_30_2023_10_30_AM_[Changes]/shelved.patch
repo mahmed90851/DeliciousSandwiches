@@ -1,21 +1,21 @@
-<<<<<<< HEAD
-Index: src/main/java/org/example/raquan.java
+Index: .idea/encodings.xml
 IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
-<+>package org.example;\r\n\r\npublic class raquan { //hey guys //new comment\r\n}\r\n
 Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 <+>UTF-8
 ===================================================================
-diff --git a/src/main/java/org/example/raquan.java b/src/main/java/org/example/raquan.java
---- a/src/main/java/org/example/raquan.java	(revision 3b167b9b467fb0cfbbf362dc807097950f3df12c)
-+++ b/src/main/java/org/example/raquan.java	(date 1685456830430)
-@@ -1,4 +1,4 @@
- package org.example;
- 
--public class raquan { //hey guys //new comment
-+public class raquan { //hey guys //new comment/
- }
-=======
+diff --git a/.idea/encodings.xml b/.idea/encodings.xml
+new file mode 100644
+--- /dev/null	(date 1685456846075)
++++ b/.idea/encodings.xml	(date 1685456846075)
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Encoding">
++    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
++    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
++  </component>
++</project>
+\ No newline at end of file
 Index: .idea/workspace.xml
 IDEA additional info:
 Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
@@ -24,8 +24,8 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 <+>UTF-8
 ===================================================================
 diff --git a/.idea/workspace.xml b/.idea/workspace.xml
---- a/.idea/workspace.xml	(revision 13f80ff7c9e8dd12350e07459f517742aadaaa74)
-+++ b/.idea/workspace.xml	(date 1685456839411)
+--- a/.idea/workspace.xml	(revision 0900c4820787988091e083216840dddc01ef9d50)
++++ b/.idea/workspace.xml	(date 1685456846060)
 @@ -4,18 +4,34 @@
      <option name="autoReloadType" value="SELECTIVE" />
    </component>
@@ -92,28 +92,4 @@ diff --git a/.idea/workspace.xml b/.idea/workspace.xml
 +    <option name="LAST_COMMIT_MESSAGE" value="c" />
 +  </component>
  </project>
-\ No newline at end of file
->>>>>>> 621cbc9f8f41c8ed6fdccb06c23794dc3d9dec63
-Index: .idea/encodings.xml
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
-diff --git a/.idea/encodings.xml b/.idea/encodings.xml
-new file mode 100644
-<<<<<<< HEAD
---- /dev/null	(date 1685456579495)
-+++ b/.idea/encodings.xml	(date 1685456579495)
-=======
---- /dev/null	(date 1685455714276)
-+++ b/.idea/encodings.xml	(date 1685455714276)
->>>>>>> 621cbc9f8f41c8ed6fdccb06c23794dc3d9dec63
-@@ -0,0 +1,7 @@
-+<?xml version="1.0" encoding="UTF-8"?>
-+<project version="4">
-+  <component name="Encoding">
-+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
-+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
-+  </component>
-+</project>
 \ No newline at end of file
