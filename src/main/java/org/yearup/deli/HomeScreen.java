@@ -12,6 +12,6 @@ package org.yearup.deli;
         After customizing each sandwich, the application should prompt me if I want to add another sandwich or proceed to checkout.
         When I complete my order, the application should display the order details, including the list of sandwiches with toppings, the total cost, and a verification prompt.
         The application should save the order details to a receipt file in the receipts folder.
-        Each receipt file should be named with the date and time of the order placement in the format "yyyyMMdd-hhmmss.txt" (e.g., 20230530-144500.txt).*/
+        Each receipt file should be named with the date and time of the order placement in the formaht "yyyyMMdd-hhmmss.txt" (e.g., 20230530-144500.txt).*/
 public class HomeScreen {
 }
