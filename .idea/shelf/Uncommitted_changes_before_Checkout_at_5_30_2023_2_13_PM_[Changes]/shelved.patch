@@ -1,0 +1,17 @@
+Index: src/main/java/org/example/OrderScreen.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example;\r\n\r\nimport java.util.Scanner;\r\n\r\npublic class OrderScreen {\r\n    private Order currentOrder;\r\n\r\n    public OrderScreen() {\r\n        currentOrder = new Order();\r\n    }\r\n\r\n    public void show() {\r\n        Scanner scanner = new Scanner(System.in);\r\n        int choice = -1;\r\n        while (choice != 0) {\r\n            System.out.println(\"Order Screen\");\r\n            System.out.println(\"1) Add Sandwich\");\r\n            System.out.println(\"2) Add Drink\");\r\n            System.out.println(\"3) Add Chips\");\r\n            System.out.println(\"4) Checkout\");\r\n            System.out.println(\"0) Cancel Order\");\r\n            System.out.print(\"Enter your choice: \");\r\n            choice = scanner.nextInt();\r\n            scanner.nextLine(); // Consume newline character\r\n        }\r\n    }\r\n}
+===================================================================
+diff --git a/src/main/java/org/example/OrderScreen.java b/src/main/java/org/example/OrderScreen.java
+--- a/src/main/java/org/example/OrderScreen.java	
++++ b/src/main/java/org/example/OrderScreen.java	
+@@ -22,6 +22,7 @@
+             System.out.print("Enter your choice: ");
+             choice = scanner.nextInt();
+             scanner.nextLine(); // Consume newline character
++            
+         }
+     }
+ }
+\ No newline at end of file

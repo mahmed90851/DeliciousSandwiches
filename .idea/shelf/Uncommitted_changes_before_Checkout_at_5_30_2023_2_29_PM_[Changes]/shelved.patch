@@ -1,0 +1,199 @@
+Index: src/main/java/org/yearup/deli/Bread.java
+===================================================================
+diff --git a/src/main/java/org/yearup/deli/Bread.java b/src/main/java/org/yearup/deli/Bread.java
+deleted file mode 100644
+--- a/src/main/java/org/yearup/deli/Bread.java	(revision b397356790981b0a8c9725306ba8f16ad14e6bc8)
++++ /dev/null	(revision b397356790981b0a8c9725306ba8f16ad14e6bc8)
+@@ -1,27 +0,0 @@
+-package org.yearup.deli;
+-
+-public class Bread {
+-    private String name;
+-    private double price;
+-
+-    public String getName() {
+-        return name;
+-    }
+-
+-    public void setName(String name) {
+-        this.name = name;
+-    }
+-
+-    public double getPrice() {
+-        return price;
+-    }
+-
+-    public void setPrice(double price) {
+-        this.price = price;
+-    }
+-
+-    public Bread(String name, double price) {
+-        this.name = name;
+-        this.price = price;
+-    }
+-}
+Index: src/main/java/org/yearup/deli/Topping.java
+===================================================================
+diff --git a/src/main/java/org/yearup/deli/Topping.java b/src/main/java/org/yearup/deli/Topping.java
+deleted file mode 100644
+--- a/src/main/java/org/yearup/deli/Topping.java	(revision b397356790981b0a8c9725306ba8f16ad14e6bc8)
++++ /dev/null	(revision b397356790981b0a8c9725306ba8f16ad14e6bc8)
+@@ -1,39 +0,0 @@
+-package org.example;
+-
+-public enum Topping {
+-    LETTUCE("Lettuce", ToppingCategory.REGULAR),
+-    PEPPERS("Peppers", ToppingCategory.REGULAR),
+-    ONIONS("Onions", ToppingCategory.REGULAR),
+-    TOMATOES("Tomatoes", ToppingCategory.REGULAR),
+-    JALEPENOS("Jalepenos", ToppingCategory.REGULAR),
+-    CUCUMBERS("Cucumbers", ToppingCategory.REGULAR),
+-    PICKLES("Pickles", ToppingCategory.REGULAR),
+-    GUACAMOLE("Guacamole", ToppingCategory.REGULAR),
+-    MUSHROOMS("Mushrooms", ToppingCategory.REGULAR),
+-    STEAK("Steak", ToppingCategory.PREMIUM),
+-    HAM("Ham", ToppingCategory.PREMIUM),
+-    SALAMI("Salami", ToppingCategory.PREMIUM),
+-    ROAST_BEEF("Roast Beef", ToppingCategory.PREMIUM),
+-    CHICKEN("Chicken", ToppingCategory.PREMIUM),
+-    BACON("Bacon", ToppingCategory.PREMIUM),
+-    AMERICAN_CHEESE("American", ToppingCategory.PREMIUM),
+-    PROVOLONE_CHEESE("Provolone", ToppingCategory.PREMIUM),
+-    CHEDDAR_CHEESE("Cheddar", ToppingCategory.PREMIUM),
+-    SWISS_CHEESE("Swiss", ToppingCategory.PREMIUM);
+-
+-    private String name;
+-    private ToppingCategory category;
+-
+-    private Topping(String name, ToppingCategory category) {
+-        this.name = name;
+-        this.category = category;
+-    }
+-
+-    public String getName() {
+-        return name;
+-    }
+-
+-    public ToppingCategory getCategory() {
+-        return category;
+-    }
+-}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"3292681e-fe85-4824-b3d7-1b8d05f60ae8\" name=\"Changes\" comment=\"updated code\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Merge.Settings\">\r\n    <option name=\"BRANCH\" value=\"origin/SauceClasses\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"importingSettings\">\r\n      <MavenImportingSettings>\r\n        <option name=\"workspaceImportEnabled\" value=\"true\" />\r\n      </MavenImportingSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2QW3GesJiBQIKVSHEy0RbKCV8yJ\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n    <option name=\"showMembers\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"3292681e-fe85-4824-b3d7-1b8d05f60ae8\" name=\"Changes\" comment=\"\" />\r\n      <created>1685455418790</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1685455418790</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"updated code\">\r\n      <created>1685470334267</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1685470334268</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"updated code\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"updated code\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision b397356790981b0a8c9725306ba8f16ad14e6bc8)
++++ b/.idea/workspace.xml	(date 1685470741027)
+@@ -4,19 +4,43 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="3292681e-fe85-4824-b3d7-1b8d05f60ae8" name="Changes" comment="updated code" />
++<<<<<<<<< Temporary merge branch 1
++    <list default="true" id="3292681e-fe85-4824-b3d7-1b8d05f60ae8" name="Changes" comment="c">
++      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
++=========
++    <list default="true" id="3292681e-fe85-4824-b3d7-1b8d05f60ae8" name="Changes" comment="initial code">
++      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Topping.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/nabil.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/raquan.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/tou.java" beforeDir="false" />
++>>>>>>>>> Temporary merge branch 2
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
+-  <component name="Git.Merge.Settings">
+-    <option name="BRANCH" value="origin/SauceClasses" />
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Class" />
++      </list>
++    </option>
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
++  <component name="MarkdownSettingsMigration">
++    <option name="stateVersion" value="1" />
++  </component>
+   <component name="MavenImportPreferences">
++    <option name="generalSettings">
++      <MavenGeneralSettings>
++        <option name="useMavenConfig" value="true" />
++      </MavenGeneralSettings>
++    </option>
+     <option name="importingSettings">
+       <MavenImportingSettings>
+         <option name="workspaceImportEnabled" value="true" />
+@@ -33,7 +57,8 @@
+   <component name="PropertiesComponent">{
+   &quot;keyToString&quot;: {
+     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
+   }
+ }</component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+@@ -45,14 +70,32 @@
+       <option name="presentableId" value="Default" />
+       <updated>1685455418790</updated>
+     </task>
+-    <task id="LOCAL-00001" summary="updated code">
+-      <created>1685470334267</created>
++<<<<<<<<< Temporary merge branch 1
++    <task id="LOCAL-00001" summary="c">
++      <created>1685456495622</created>
+       <option name="number" value="00001" />
+       <option name="presentableId" value="LOCAL-00001" />
+       <option name="project" value="LOCAL" />
+-      <updated>1685470334268</updated>
++      <updated>1685456495622</updated>
++    </task>
++    <task id="LOCAL-00002" summary="c">
++      <created>1685459003248</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1685459003248</updated>
++    </task>
++    <option name="localTasksCounter" value="3" />
++=========
++    <task id="LOCAL-00001" summary="initial code">
++      <created>1685455479989</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1685455479990</updated>
+     </task>
+     <option name="localTasksCounter" value="2" />
++>>>>>>>>> Temporary merge branch 2
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -67,7 +110,12 @@
+     </option>
+   </component>
+   <component name="VcsManagerConfiguration">
+-    <MESSAGE value="updated code" />
+-    <option name="LAST_COMMIT_MESSAGE" value="updated code" />
++<<<<<<<<< Temporary merge branch 1
++    <MESSAGE value="c" />
++    <option name="LAST_COMMIT_MESSAGE" value="c" />
++=========
++    <MESSAGE value="initial code" />
++    <option name="LAST_COMMIT_MESSAGE" value="initial code" />
++>>>>>>>>> Temporary merge branch 2
+   </component>
+ </project>
+\ No newline at end of file

@@ -1,0 +1,105 @@
+Index: src/main/java/org/yearup/deli/HomeScreen.java
+===================================================================
+diff --git a/src/main/java/org/yearup/deli/HomeScreen.java b/src/main/java/org/yearup/deli/HomeScreen.java
+deleted file mode 100644
+--- a/src/main/java/org/yearup/deli/HomeScreen.java	
++++ /dev/null	
+@@ -1,17 +0,0 @@
+-package org.yearup.deli;
+-/*     User Story
+-        The application should prompt me to choose the size of the sandwich (4", 8", or 12").
+-        I should be able to select the type of bread for my sandwich (white, wheat, rye, or wrap).
+-        The application should provide me with a list of regular toppings to choose from.
+-        I should be able to select multiple regular toppings for my sandwich.
+-        The application should display a separate list of premium toppings, including meats and cheeses, with the additional cost indicated.
+-        I should be able to select multiple premium toppings for my sandwich, with the additional cost included in the total.
+-        The application should allow me to request extra toppings, both regular and premium, at an additional cost.
+-        I should have the option to have my sandwich toasted.
+-        I should be able to add drinks and chips to my order.
+-        After customizing each sandwich, the application should prompt me if I want to add another sandwich or proceed to checkout.
+-        When I complete my order, the application should display the order details, including the list of sandwiches with toppings, the total cost, and a verification prompt.
+-        The application should save the order details to a receipt file in the receipts folder.
+-        Each receipt file should be named with the date and time of the order placement in the format "yyyyMMdd-hhmmss.txt" (e.g., 20230530-144500.txt).*/
+-public class HomeScreen {
+-}
+Index: src/main/java/org/yearup/deli/Bread.java
+===================================================================
+diff --git a/src/main/java/org/yearup/deli/Bread.java b/src/main/java/org/yearup/deli/Bread.java
+deleted file mode 100644
+--- a/src/main/java/org/yearup/deli/Bread.java	
++++ /dev/null	
+@@ -1,27 +0,0 @@
+-package org.yearup.deli;
+-
+-public class Bread {
+-    private String name;
+-    private double price;
+-
+-    public String getName() {
+-        return name;
+-    }
+-
+-    public void setName(String name) {
+-        this.name = name;
+-    }
+-
+-    public double getPrice() {
+-        return price;
+-    }
+-
+-    public void setPrice(double price) {
+-        this.price = price;
+-    }
+-
+-    public Bread(String name, double price) {
+-        this.name = name;
+-        this.price = price;
+-    }
+-}
+Index: src/main/java/org/yearup/deli/Topping.java
+===================================================================
+diff --git a/src/main/java/org/yearup/deli/Topping.java b/src/main/java/org/yearup/deli/Topping.java
+deleted file mode 100644
+--- a/src/main/java/org/yearup/deli/Topping.java	
++++ /dev/null	
+@@ -1,19 +0,0 @@
+-package org.example;
+-
+-public class Topping {
+-    private String name;
+-    private double price;
+-
+-    public Topping(String name, double price) {
+-        this.name = name;
+-        this.price = price;
+-    }
+-
+-    public String getName() {
+-        return name;
+-    }
+-
+-    public double getPrice() {
+-        return price;
+-    }
+-}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"3292681e-fe85-4824-b3d7-1b8d05f60ae8\" name=\"Changes\" comment=\"c\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/encodings.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n    <option name=\"importingSettings\">\r\n      <MavenImportingSettings>\r\n        <option name=\"workspaceImportEnabled\" value=\"true\" />\r\n      </MavenImportingSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2QW3GesJiBQIKVSHEy0RbKCV8yJ\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n    <option name=\"showMembers\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"3292681e-fe85-4824-b3d7-1b8d05f60ae8\" name=\"Changes\" comment=\"\" />\r\n      <created>1685455418790</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1685455418790</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"c\">\r\n      <created>1685456495622</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1685456495622</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"c\">\r\n      <created>1685459003248</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1685459003248</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"c\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"c\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,9 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="3292681e-fe85-4824-b3d7-1b8d05f60ae8" name="Changes" comment="c">
+-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+-    </list>
++    <list default="true" id="3292681e-fe85-4824-b3d7-1b8d05f60ae8" name="Changes" comment="c" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

@@ -1,0 +1,16 @@
+Index: src/main/java/org/yearup/deli/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/yearup/deli/Main.java b/src/main/java/org/example/Main.java
+rename from src/main/java/org/yearup/deli/Main.java
+rename to src/main/java/org/example/Main.java
+--- a/src/main/java/org/yearup/deli/Main.java	
++++ b/src/main/java/org/example/Main.java	
+@@ -1,4 +1,4 @@
+-package org.yearup.deli;
++package org.example;
+ 
+ public class Main {
+     public static void main(String[] args) {
