@@ -1,4 +1,4 @@
-package org.yearup.deli;
+package org.example;
 
 public class Bread {
     private String name;
