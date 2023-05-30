@@ -1,0 +1,34 @@
+Index: src/main/java/org/example/raquan.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example;\r\n\r\npublic class raquan { //hey guys //new comment\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/example/raquan.java b/src/main/java/org/example/raquan.java
+--- a/src/main/java/org/example/raquan.java	(revision 3b167b9b467fb0cfbbf362dc807097950f3df12c)
++++ b/src/main/java/org/example/raquan.java	(date 1685456830430)
+@@ -1,4 +1,4 @@
+ package org.example;
+ 
+-public class raquan { //hey guys //new comment
++public class raquan { //hey guys //new comment/
+ }
+Index: .idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/encodings.xml b/.idea/encodings.xml
+new file mode 100644
+--- /dev/null	(date 1685456579495)
++++ b/.idea/encodings.xml	(date 1685456579495)
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Encoding">
++    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
++    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
++  </component>
++</project>
+\ No newline at end of file
