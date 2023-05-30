@@ -22,7 +22,6 @@ public class OrderScreen {
             System.out.print("Enter your choice: ");
             choice = scanner.nextInt();
             scanner.nextLine(); // Consume newline character
-
         }
     }
 }
