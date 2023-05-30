@@ -6,12 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3292681e-fe85-4824-b3d7-1b8d05f60ae8" name="Changes" comment="c">
       <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/yearup/deli/HomeScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yearup/deli/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/nabil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yearup/deli/nabil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/raquan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yearup/deli/raquan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/tou.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yearup/deli/tou.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,8 +67,26 @@
       <option name="project" value="LOCAL" />
       <updated>1685456495622</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="c">
+      <created>1685459003248</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685459003248</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="c" />
