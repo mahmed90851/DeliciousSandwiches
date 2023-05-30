@@ -1,4 +1,7 @@
 package org.example;
+
+import java.util.Scanner;
+
 /*     User Story
         The application should prompt me to choose the size of the sandwich (4", 8", or 12").
         I should be able to select the type of bread for my sandwich (white, wheat, rye, or wrap).
@@ -14,4 +17,30 @@ package org.example;
         The application should save the order details to a receipt file in the receipts folder.
         Each receipt file should be named with the date and time of the order placement in the formaht "yyyyMMdd-hhmmss.txt" (e.g., 20230530-144500.txt).*/
 public class HomeScreen {
+    public void start() {
+        Scanner scanner = new Scanner(System.in);
+        int choice = -1;
+        while (choice != 0) {
+            System.out.println("Home Screen");
+            System.out.println("1) New Order");
+            System.out.println("0) Exit");
+            System.out.print("Enter your choice: ");
+            choice = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (choice) {
+                case 1:
+                    OrderScreen orderScreen = new OrderScreen();
+                    orderScreen.show();
+                    break;
+                case 0:
+                    System.out.println("Exiting the application...");
+                    break;
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+            }
+        }
+        scanner.close();
+    }
 }
+
