@@ -3,14 +3,37 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
-    private List<Sandwich> sandwiches;
-    private List<Drink> drinks;
-    private List<Chip> chips;
+    private List<IOrderable> items;
 
     public Order() {
-        sandwiches = new ArrayList<>();
-        drinks = new ArrayList<>();
-        chips = new ArrayList<>();
+        items = new ArrayList<>();
     }
 
+    public void addOrderable(IOrderable item) {
+        items.add(item);
+    }
+
+    public void removeOrderable(IOrderable item) {
+        items.remove(item);
+    }
+
+    public double getTotalPrice() {
+        double totalPrice = 0.0;
+        for (IOrderable item : items) {
+            totalPrice += item.getPrice();
+        }
+        return totalPrice;
+    }
+
+    public String getReceipt() {
+        StringBuilder receipt = new StringBuilder();
+        for (IOrderable item : items) {
+            receipt.append(item.getOrderDetails()).append("\n");
+        }
+        return receipt.toString();
+    }
+
+    public void clear() {
+        items.clear();
+    }
 }

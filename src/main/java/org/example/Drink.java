@@ -1,34 +1,25 @@
 package org.example;
 
-public class Drink {
+public class Drink implements IOrderable {
+    private DrinkType type;
     private DrinkSize size;
     private String flavor;
 
-    public Drink(DrinkSize size, String flavor) {
+    public Drink(DrinkType type, DrinkSize size, String flavor) {
+        this.type = type;
         this.size = size;
         this.flavor = flavor;
     }
 
-    // Getters and Setters
-    public DrinkSize getSize() {
-        return size;
+    public double getPrice() {
+        return size.getPrice();
     }
 
-    public void setSize(DrinkSize size) {
-        this.size = size;
-    }
-
-    public String getFlavor() {
-        return flavor;
-    }
-
-    public void setFlavor(String flavor) {
-        this.flavor = flavor;
-    }
-
-    // toString method
-    @Override
-    public String toString() {
-        return size + " " + flavor + " Drink";
+    public String getOrderDetails() {
+        StringBuilder details = new StringBuilder();
+        details.append("Drink: ").append(type.getName()).append("\n");
+        details.append("Size: ").append(size.getSize()).append(" oz\n");
+        details.append("Flavor: ").append(flavor).append("\n");
+        return details.toString();
     }
 }
