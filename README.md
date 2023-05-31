@@ -39,11 +39,6 @@ The add sandwich screen guides the user through the process of creating a custom
 - Sandwich size:
 - Toppings (with the ability to add extras for each topping category):
 
-Meat:
-Cheese:
-Other toppings:
-Select sauces:
-Would you like the sandwich toasted?
 
 ![Screen Shot 2023-05-31 at 7.35.08 PM.png](Screen%20Shot%202023-05-31%20at%207.35.08%20PM.png)
 ### Drink Screen
