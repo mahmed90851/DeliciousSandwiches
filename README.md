@@ -14,7 +14,7 @@ Additionally, customers can specify if they want their sandwich toasted and add 
 
 The application aims to improve efficiency and enhance the customer experience at DELI-cious by automating the order process and ensuring accurate customization of sandwiches.
 
-###  Home Screen 
+### Home Screen 
 The home screen provides the following options:
 
  - New Order: Start a new order.
@@ -31,7 +31,7 @@ The order screen displays the entries in reverse chronological order (newest ent
 - Checkout: Proceed to the checkout screen.
 - Cancel Order: Delete the current order and go back to the home screen.
 
-### Add Sandwich Screen
+### Sandwich Screen
 The add sandwich screen guides the user through the process of creating a customized sandwich. The following options are available:
 
 - Select your bread:
@@ -44,14 +44,17 @@ Other toppings:
 Select sauces:
 Would you like the sandwich toasted?
 
-### Add Drink Screen
-The add drink screen allows the user to select the drink size and flavor.
+### Drink Screen
+The drink screen allows the user to select the drink size and flavor.
 
-### Add Chips Screen
-The add chips screen enables the user to select the type of chips.
+### Chip Screen
+The chips screen enables the user to select the type of chips.
 
-### Checkout Screen
-The checkout screen displays the order details, including the list of sandwiches with toppings and the total price.
+### Bread Screen
+
+### Sauce Screen
+### Topping Screen
+### Receipt Screen
 
 The following options are available:
 
