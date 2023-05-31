@@ -1,42 +1,37 @@
 package org.example;
-
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Receipt {
-    private Order order;
 
-    public Receipt(Order order) {
-        this.order = order;
-    }
+    private static final String RECEIPTS_FOLDER = "receipts/";
 
-    public void generateReceipt() {
-        String receiptContent = formatReceiptContent();
+    public static void saveReceipt(Order order) {
         String fileName = generateFileName();
+        String receiptContent = generateReceiptContent(order);
 
-        try (PrintWriter writer = new PrintWriter(new FileWriter(fileName))) {
-            writer.println(receiptContent);
-            System.out.println("Receipt generated successfully!");
+        try (FileWriter fileWriter = new FileWriter(RECEIPTS_FOLDER + fileName)) {
+            fileWriter.write(receiptContent);
+            System.out.println("Receipt saved successfully: " + fileName);
         } catch (IOException e) {
-            System.out.println("Error occurred while generating receipt: " + e.getMessage());
+            System.out.println("Failed to save receipt.");
+            e.printStackTrace();
         }
     }
 
-    private String formatReceiptContent() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Order Details:\n");
-        sb.append(order.formatOrderDetails());
-
-        return sb.toString();
-    }
-
-    private String generateFileName() {
+    private static String generateFileName() {
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss");
-        String timestamp = now.format(formatter);
-        return timestamp + ".txt";
+        return now.format(formatter) + ".txt";
+    }
+
+    private static String generateReceiptContent(Order order) {
+        StringBuilder receipt = new StringBuilder();
+        receipt.append("Order Details:\n");
+        receipt.append(order.getReceipt());
+        receipt.append("Total Price: $").append(order.getTotalPrice()).append("\n");
+        return receipt.toString();
     }
 }

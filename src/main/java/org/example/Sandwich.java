@@ -2,13 +2,13 @@ package org.example;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sandwich {
+public class Sandwich implements IOrderable {
     private Bread bread;
     private List<Topping> toppings;
     private int size;
     private boolean toasted;
 
-    public Sandwich(Bread bread, int size) {
+    public Sandwich(Bread bread, SandwichSize size) {
         this.bread = bread;
         this.size = size;
         this.toppings = new ArrayList<>();

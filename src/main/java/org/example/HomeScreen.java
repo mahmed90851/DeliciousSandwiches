@@ -1,33 +1,30 @@
 package org.example;
-
 import java.util.Scanner;
 
 public class HomeScreen {
-    public void start() {
+    public void display() {
         Scanner scanner = new Scanner(System.in);
-        int choice = -1;
-        while (choice != 0) {
-            System.out.println("Home Screen");
-            System.out.println("1) New Order");
+
+        while (true) {
+            System.out.println("Welcome to DELI-cious!");
+            System.out.println("1) Place a New Order");
             System.out.println("0) Exit");
             System.out.print("Enter your choice: ");
-            choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline character
+            int choice = scanner.nextInt();
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
-                    OrderScreen orderScreen = new OrderScreen();
-                    orderScreen.show();
+                    Order order = new Order();
+                    OrderScreen orderScreen = new OrderScreen(order);
+                    orderScreen.display();
                     break;
                 case 0:
-                    System.out.println("Exiting the application...");
-                    break;
+                    System.out.println("Exiting the application. Goodbye!");
+                    return;
                 default:
                     System.out.println("Invalid choice. Please try again.");
             }
         }
-        scanner.close();
     }
 }
-
-
