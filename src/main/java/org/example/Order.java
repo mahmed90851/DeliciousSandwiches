@@ -30,18 +30,18 @@ public class Order {
         StringBuilder receipt = new StringBuilder();
         receipt.append("Order Details:\n");
 
-        String format = "%-30s %10s%n"; // Adjust the padding as needed
+        String format = "%-35s %10s%n";
 
         for (OrderableItem item : items) {
-            receipt.append("------------------------------------\n");
+            receipt.append("-----------------------------------------------\n");
             receipt.append(item.getOrderDetails());
-            receipt.append(String.format(format, "Price:", String.format("$%.2f", item.getPrice())));
-            receipt.append("------------------------------------\n");
+            receipt.append(String.format(format, "\nPrice:", String.format("$%.2f", item.getPrice())));
+            receipt.append("-----------------------------------------------\n");
         }
 
-        receipt.append("------------------------------------\n");
+        receipt.append("------------------------------------------------\n");
         receipt.append(String.format(format, "Total Price:", String.format("$%.2f", getTotalPrice())));
-        receipt.append("------------------------------------\n");
+        receipt.append("-----------------------------------------------\n");
 
         return receipt.toString();
     }
