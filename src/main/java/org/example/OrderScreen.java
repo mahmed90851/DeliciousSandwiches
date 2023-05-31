@@ -1,9 +1,10 @@
 package org.example;
 
 import java.util.Scanner;
-import java.util.Scanner;
+
 
 public class OrderScreen {
+
     private Order order;
 
     public OrderScreen(Order order) {
@@ -325,15 +326,24 @@ public class OrderScreen {
     private void checkout() {
         System.out.println("Checkout");
         System.out.println("Order Details:");
-        System.out.println(order.getReceipt());
+
+        // Debugging statements
+        System.out.println("Number of items in the order: " + order.getItems().size());
+        for (OrderableItem item : order.getItems()) {
+            System.out.println(item.getOrderDetails());
+        }
+
         System.out.printf("Total Price: $%.2f%n", order.getTotalPrice());
 
         // Perform any additional checkout logic, such as payment processing or generating a receipt file
 
-        // Clear the order for the next transaction
-        order.clear();
-
         System.out.println("Thank you for your order!");
+
+        String folderPath = "ReceiptsFolder";
+        String receiptContent = order.getReceipt(); // Replace with the actual receipt content
+
+        ReceiptManager receiptManager = new ReceiptManager(folderPath);
+        receiptManager.createReceipt(receiptContent);
 
         System.exit(0);
     }

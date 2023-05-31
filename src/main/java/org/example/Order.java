@@ -1,4 +1,5 @@
 package org.example;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,13 +28,30 @@ public class Order {
 
     public String getReceipt() {
         StringBuilder receipt = new StringBuilder();
+        receipt.append("Order Details:\n");
+
+        String format = "%-30s %10s%n"; // Adjust the padding as needed
+
         for (OrderableItem item : items) {
-            receipt.append(item.getOrderDetails()).append("\n");
+            receipt.append("------------------------------------\n");
+            receipt.append(item.getOrderDetails());
+            receipt.append(String.format(format, "Price:", String.format("$%.2f", item.getPrice())));
+            receipt.append("------------------------------------\n");
         }
+
+        receipt.append("------------------------------------\n");
+        receipt.append(String.format(format, "Total Price:", String.format("$%.2f", getTotalPrice())));
+        receipt.append("------------------------------------\n");
+
         return receipt.toString();
     }
 
+
     public void clear() {
         items.clear();
+    }
+
+    public List<OrderableItem> getItems() {
+        return items;
     }
 }
