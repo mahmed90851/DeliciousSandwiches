@@ -5,4 +5,3 @@ public enum DrinkSize {
     MEDIUM,
     LARGE
 }
-

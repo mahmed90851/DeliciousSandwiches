@@ -1,39 +1,45 @@
 package org.example;
 
-public enum Topping {
-    LETTUCE("Lettuce", ToppingCategory.REGULAR),
-    PEPPERS("Peppers", ToppingCategory.REGULAR),
-    ONIONS("Onions", ToppingCategory.REGULAR),
-    TOMATOES("Tomatoes", ToppingCategory.REGULAR),
-    JALEPENOS("Jalepenos", ToppingCategory.REGULAR),
-    CUCUMBERS("Cucumbers", ToppingCategory.REGULAR),
-    PICKLES("Pickles", ToppingCategory.REGULAR),
-    GUACAMOLE("Guacamole", ToppingCategory.REGULAR),
-    MUSHROOMS("Mushrooms", ToppingCategory.REGULAR),
-    STEAK("Steak", ToppingCategory.PREMIUM),
-    HAM("Ham", ToppingCategory.PREMIUM),
-    SALAMI("Salami", ToppingCategory.PREMIUM),
-    ROAST_BEEF("Roast Beef", ToppingCategory.PREMIUM),
-    CHICKEN("Chicken", ToppingCategory.PREMIUM),
-    BACON("Bacon", ToppingCategory.PREMIUM),
-    AMERICAN_CHEESE("American", ToppingCategory.PREMIUM),
-    PROVOLONE_CHEESE("Provolone", ToppingCategory.PREMIUM),
-    CHEDDAR_CHEESE("Cheddar", ToppingCategory.PREMIUM),
-    SWISS_CHEESE("Swiss", ToppingCategory.PREMIUM);
 
+public class Topping {
     private String name;
-    private ToppingCategory category;
+    private ToppingType type;
+    private double price;
 
-    private Topping(String name, ToppingCategory category) {
+    public Topping(String name, ToppingType type, double cost) {
         this.name = name;
-        this.category = category;
+        this.type = type;
+        this.price = cost;
     }
 
+    // Getters and Setters
     public String getName() {
         return name;
     }
 
-    public ToppingCategory getCategory() {
-        return category;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public ToppingType getType() {
+        return type;
+    }
+
+    public void setType(ToppingType type) {
+        this.type = type;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    // toString method
+    @Override
+    public String toString() {
+        return name;
     }
 }

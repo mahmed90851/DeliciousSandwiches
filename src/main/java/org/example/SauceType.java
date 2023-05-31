@@ -1,10 +1,10 @@
 package org.example;
 
 public enum SauceType {
-    Mayo,
-    Mustard,
-    Ketchup,
-    Ranch,
-    ThousandIslands,
-    Vinaigrette
+    MAYO,
+    MUSTARD,
+    KETCHUP,
+    RANCH,
+    THOUSAND_ISLANDS,
+    VINAIGRETTE
 }
