@@ -1,24 +1,18 @@
 package org.example;
 
-public class Chip {
-    private ChipType type;
+public class Chip implements OrderableItem {
+    private final ChipType type;
+
 
     public Chip(ChipType type) {
         this.type = type;
     }
 
-    // Getter and Setter
-    public ChipType getType() {
-        return type;
+    public double getPrice() {
+        return 1.50;
     }
 
-    public void setType(ChipType type) {
-        this.type = type;
-    }
-
-    // toString method
-    @Override
-    public String toString() {
-        return type.toString() + " Chip";
+    public String getOrderDetails() {
+        return "Chip: " + type.getName();
     }
 }

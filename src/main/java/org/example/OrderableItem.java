@@ -1,6 +1,6 @@
 package org.example;
 
-public interface IOrderable {
+public interface OrderableItem {
     double getPrice();
     String getOrderDetails();
 }
