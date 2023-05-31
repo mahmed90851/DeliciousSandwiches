@@ -31,6 +31,7 @@ The order screen displays the entries in reverse chronological order (newest ent
 - Checkout: Proceed to the checkout screen.
 - Cancel Order: Delete the current order and go back to the home screen.
 
+![Screen Shot 2023-05-31 at 7.34.06 PM.png](Screen%20Shot%202023-05-31%20at%207.34.06%20PM.png)
 ### Sandwich Screen
 The add sandwich screen guides the user through the process of creating a customized sandwich. The following options are available:
 
@@ -44,18 +45,18 @@ Other toppings:
 Select sauces:
 Would you like the sandwich toasted?
 
+![Screen Shot 2023-05-31 at 7.35.08 PM.png](Screen%20Shot%202023-05-31%20at%207.35.08%20PM.png)
 ### Drink Screen
 The drink screen allows the user to select the drink size and flavor.
 
+![Screen Shot 2023-05-31 at 7.36.04 PM.png](Screen%20Shot%202023-05-31%20at%207.36.04%20PM.png)
 ### Chip Screen
 The chips screen enables the user to select the type of chips.
 
-### Bread Screen
+![Screen Shot 2023-05-31 at 7.36.54 PM.png](Screen%20Shot%202023-05-31%20at%207.36.54%20PM.png)
 
-### Sauce Screen
-### Topping Screen
 ### Receipt Screen
-
+![Screen Shot 2023-05-31 at 7.37.33 PM.png](Screen%20Shot%202023-05-31%20at%207.37.33%20PM.png)
 The following options are available:
 
 Confirm: Create the receipt file, return to the home screen, and complete the order.
@@ -63,7 +64,3 @@ Cancel: Delete the current order and go back to the home screen.
 
 ### One interesting of piece code from the project :
         //
-
-## Screenshots
-
-## Class Diagram
