@@ -63,9 +63,15 @@ public class OrderScreen {
         int sizeChoice = scanner.nextInt();
         scanner.nextLine();
 
+        // Prompt the user for toppings
         System.out.println("Select toppings (separate with comma, e.g., LETTUCE,TOMATOES): ");
         String toppingsInput = scanner.nextLine();
         String[] toppingsArray = toppingsInput.split(",");
+
+        // Prompt the user for sauces
+        System.out.println("Select sauces (separate with comma, e.g., MAYO,MUSTARD): ");
+        String saucesInput = scanner.nextLine();
+        String[] saucesArray = saucesInput.split(",");
 
         // Create a new Sandwich object
         BreadType breadType;
@@ -86,7 +92,7 @@ public class OrderScreen {
                 System.out.println("Invalid bread choice. Sandwich not added.");
                 return;
         }
-        Bread bread = new Bread(breadType);
+        Bread bread = new Bread(breadType.getName(), breadType.getPrice());
 
         SandwichSize sandwichSize;
         switch (sizeChoice) {
@@ -136,29 +142,71 @@ public class OrderScreen {
                 case "MUSHROOMS":
                     topping = Topping.MUSHROOMS;
                     break;
-                case "MAYO":
-                    topping = Topping.MAYO;
+                case "STEAK":
+                    topping = Topping.STEAK;
                     break;
-                case "MUSTARD":
-                    topping = Topping.MUSTARD;
+                case "HAM":
+                    topping = Topping.HAM;
                     break;
-                case "KETCHUP":
-                    topping = Topping.KETCHUP;
+                case "SALAMI":
+                    topping = Topping.SALAMI;
                     break;
-                case "RANCH":
-                    topping = Topping.RANCH;
+                case "ROAST BEEF":
+                    topping = Topping.ROAST_BEEF;
                     break;
-                case "THOUSAND_ISLANDS":
-                    topping = Topping.THOUSAND_ISLANDS;
+                case "CHICKEN":
+                    topping = Topping.CHICKEN;
                     break;
-                case "VINAIGRETTE":
-                    topping = Topping.VINAIGRETTE;
+                case "BACON":
+                    topping = Topping.BACON;
+                    break;
+                case "AMERICAN CHEESE":
+                    topping = Topping.AMERICAN_CHEESE;
+                    break;
+                case "PROVOLONE CHEESE":
+                    topping = Topping.PROVOLONE_CHEESE;
+                    break;
+                case "CHEDDAR CHEESE":
+                    topping = Topping.CHEDDAR_CHEESE;
+                    break;
+                case "SWISS CHEESE":
+                    topping = Topping.SWISS_CHEESE;
                     break;
                 default:
                     System.out.println("Invalid topping choice: " + toppingName);
                     continue;
             }
             sandwich.addTopping(topping);
+        }
+
+        // Add sauces to the sandwich
+        for (String sauceName : saucesArray) {
+            SauceType sauceType;
+            switch (sauceName.toUpperCase()) {
+                case "MAYO":
+                    sauceType = SauceType.MAYO;
+                    break;
+                case "MUSTARD":
+                    sauceType = SauceType.MUSTARD;
+                    break;
+                case "KETCHUP":
+                    sauceType = SauceType.KETCHUP;
+                    break;
+                case "RANCH":
+                    sauceType = SauceType.RANCH;
+                    break;
+                case "THOUSAND ISLANDS":
+                    sauceType = SauceType.THOUSAND_ISLANDS;
+                    break;
+                case "VINAIGRETTE":
+                    sauceType = SauceType.VINAIGRETTE;
+                    break;
+                default:
+                    System.out.println("Invalid sauce choice: " + sauceName);
+                    continue;
+            }
+            Sauce sauce = new Sauce(sauceType.getName());
+            sandwich.addSauce(sauce);
         }
 
         // Add the sandwich to the order
@@ -182,9 +230,6 @@ public class OrderScreen {
         System.out.print("Select drink size (1. Small, 2. Medium, 3. Large): ");
         int sizeChoice = scanner.nextInt();
         scanner.nextLine();
-
-        System.out.print("Enter drink flavor: ");
-        String flavor = scanner.nextLine();
 
         // Create a new Drink object
         DrinkType type;
@@ -225,7 +270,7 @@ public class OrderScreen {
                 return;
         }
 
-        Drink drink = new Drink(type, size, flavor);
+        Drink drink = new Drink(type, size);
 
         // Add the drink to the order
         order.addOrderable(drink);
@@ -277,7 +322,6 @@ public class OrderScreen {
         System.out.println("Chips added to the order.");
     }
 
-
     private void checkout() {
         System.out.println("Checkout");
         System.out.println("Order Details:");
@@ -290,6 +334,7 @@ public class OrderScreen {
         order.clear();
 
         System.out.println("Thank you for your order!");
-    }
 
+        System.exit(0);
+    }
 }

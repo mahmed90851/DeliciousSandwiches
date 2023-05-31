@@ -3,23 +3,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
-    private List<IOrderable> items;
+    private List<OrderableItem> items;
 
     public Order() {
         items = new ArrayList<>();
     }
 
-    public void addOrderable(IOrderable item) {
+    public void addOrderable(OrderableItem item) {
         items.add(item);
     }
 
-    public void removeOrderable(IOrderable item) {
+    public void removeOrderable(OrderableItem item) {
         items.remove(item);
     }
 
     public double getTotalPrice() {
         double totalPrice = 0.0;
-        for (IOrderable item : items) {
+        for (OrderableItem item : items) {
             totalPrice += item.getPrice();
         }
         return totalPrice;
@@ -27,7 +27,7 @@ public class Order {
 
     public String getReceipt() {
         StringBuilder receipt = new StringBuilder();
-        for (IOrderable item : items) {
+        for (OrderableItem item : items) {
             receipt.append(item.getOrderDetails()).append("\n");
         }
         return receipt.toString();
