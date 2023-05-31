@@ -1,4 +1,4 @@
-## DELI-cious Point of Sales Application
+# DELI-cious Point of Sales Application
 
 The DELI-cious Point of Sales Application is a custom sandwich shop's solution for automating their order process.
 DELI-cious currently manages orders manually on paper, but this application aims to streamline the process and make it available online in the future.
@@ -14,6 +14,9 @@ Additionally, customers can specify if they want their sandwich toasted and add 
 
 The application aims to improve efficiency and enhance the customer experience at DELI-cious by automating the order process and ensuring accurate customization of sandwiches.
 
+
+#### One interesting of piece code from the project :
+        //
 
 ## Screenshots
 
