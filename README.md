@@ -54,10 +54,7 @@ The chips screen enables the user to select the type of chips.
 The checkout screen displays the order details, including the list of sandwiches with toppings and the total price.
 
 ![Screen Shot 2023-05-31 at 7.37.33 PM.png](Screen%20Shot%202023-05-31%20at%207.37.33%20PM.png)
-The following options are available:
 
-Confirm: Create the receipt file, return to the home screen, and complete the order.
-Cancel: Delete the current order and go back to the home screen.
 ### Receipt Screen
 
 
