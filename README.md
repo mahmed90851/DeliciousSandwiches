@@ -65,3 +65,17 @@ How to Run the Application
 Clone the repository: https://github.com/mahmed90851/DeliciousSandwiches.git
 
 Run the application: IntelliJ 
+
+## Acknowledgments
+We would like to express our gratitude to the following contributors for their work on this project:
+
+* Raquan Nichols
+
+* Mohammed Ahmed
+
+* Nabil Hussein
+
+* Tou Chou
+
+We also extend our thanks to our instructor and all peers for their support and guidance throughout the development of this application.
+
