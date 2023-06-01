@@ -60,9 +60,10 @@ The checkout screen displays the order details, including the list of sandwiches
 
 ### Exiting the Application
 ![Screen Shot 2023-06-01 at 4.04.19 PM.png](Screen%20Shot%202023-06-01%20at%204.04.19%20PM.png)
-### One interesting of piece code from the project :
-        //
 
+### One interesting of piece code from the project :
+        // public static final String TEXT_PURPLE = "\u001B[35m";
+This code is interesting because it helps us to make the project look better.
 
 How to Run the Application
 Clone the repository: https://github.com/mahmed90851/DeliciousSandwiches.git
