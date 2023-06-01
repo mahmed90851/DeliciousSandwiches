@@ -1,0 +1,19 @@
+Order Details:
+-----------------------------------------------
+Size: 8"
+Bread: Wheat
+Toppings: 
+- Lettuce
+- Tomatoes
+- Chicken
+- Extra cheese
+- Extra meat
+Sauces: 
+- Mayo
+Toasted: Yes
+
+Price:                                  $9.10
+-----------------------------------------------
+------------------------------------------------
+Total Price:                             $9.10
+-----------------------------------------------
