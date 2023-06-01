@@ -19,7 +19,9 @@ public enum Topping {
     AMERICAN_CHEESE("American Cheese", 0.75, ToppingType.PREMIUM),
     PROVOLONE_CHEESE("Provolone Cheese", 0.75, ToppingType.PREMIUM),
     CHEDDAR_CHEESE("Cheddar Cheese", 0.75, ToppingType.PREMIUM),
-    SWISS_CHEESE("Swiss Cheese", 0.75, ToppingType.PREMIUM);
+    SWISS_CHEESE("Swiss Cheese", 0.75, ToppingType.PREMIUM),
+    EXTRA_MEAT("Extra meat", 0.50,ToppingType.PREMIUM),
+    EXTRA_CHEESE("Extra cheese",0.30,ToppingType.REGULAR);
 
     private String name;
     private double basePrice;

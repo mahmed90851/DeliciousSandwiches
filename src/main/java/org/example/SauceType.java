@@ -6,7 +6,9 @@ public enum SauceType {
     KETCHUP("Ketchup"),
     RANCH("Ranch"),
     THOUSAND_ISLANDS("Thousand Islands"),
-    VINAIGRETTE("Vinaigrette");
+    VINAIGRETTE("Vinaigrette"),
+    SIDE_SAUCE("Sauce"),
+    SIDE_AU_JUS("Au jus");
 
     private String name;
 

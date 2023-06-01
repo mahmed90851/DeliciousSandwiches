@@ -76,10 +76,25 @@ public class OrderScreen {
         String saucesInput = scanner.nextLine();
         String[] saucesArray = saucesInput.split(",");
 
-        // Prompt the user if they want the sandwich toasteds
-        System.out.println("Would you like the sandwich to be toasted? (Yes/No): ");
+        // Prompt the user if they want the sandwich toasted
+        System.out.print("Do you want the sandwich toasted? (Yes/No): ");
         String toastedChoice = scanner.nextLine();
         boolean toasted = toastedChoice.equalsIgnoreCase("yes");
+
+        // Prompt the user if they want extra cheese
+        System.out.print("Do you want extra cheese? (Yes/No): ");
+        String extraCheeseChoice = scanner.nextLine();
+        boolean extraCheese = extraCheeseChoice.equalsIgnoreCase("yes");
+
+        // Prompt the user if they want extra meat
+        System.out.print("Do you want extra meat? (Yes/No): ");
+        String extraMeatChoice = scanner.nextLine();
+        boolean extraMeat = extraMeatChoice.equalsIgnoreCase("yes");
+
+        // Prompt the user if they want to add sides
+        System.out.print("Do you want to add sides? (Yes/No): ");
+        String addSidesChoice = scanner.nextLine();
+        boolean addSides = addSidesChoice.equalsIgnoreCase("yes");
 
         // Create a new Sandwich object
         BreadType breadType;
@@ -107,6 +122,7 @@ public class OrderScreen {
         }
         Sandwich sandwich = new Sandwich(bread, sandwichSize);
         sandwich.setToasted(toasted);
+
         // Add toppings to the sandwich
         for (String toppingName : toppingsArray) {
             Topping topping;
@@ -155,6 +171,38 @@ public class OrderScreen {
             }
             Sauce sauce = new Sauce(sauceType.getName());
             sandwich.addSauce(sauce);
+        }
+
+        // Add extra cheese if selected
+        if (extraCheese) {
+            Topping extraCheeseTopping = Topping.EXTRA_CHEESE;
+            sandwich.addTopping(extraCheeseTopping);
+        }
+
+        // Add extra meat if selected
+        if (extraMeat) {
+            Topping extraMeatTopping = Topping.EXTRA_MEAT;
+            sandwich.addTopping(extraMeatTopping);
+        }
+
+        // Add sides if selected
+        if (addSides) {
+            System.out.print("Enter side options (separate with comma, e.g., SAUCE,AU JUS): ");
+            String sidesInput = scanner.nextLine();
+            String[] sidesArray = sidesInput.split(",");
+            for (String sideName : sidesArray) {
+                SauceType sideType;
+                switch (sideName.toUpperCase()) {
+                    case "SAUCE" -> sideType = SauceType.SIDE_SAUCE;
+                    case "AU JUS" -> sideType = SauceType.SIDE_AU_JUS;
+                    default -> {
+                        System.out.println("Invalid side choice: " + sideName);
+                        continue;
+                    }
+                }
+                Sauce side = new Sauce(sideType.getName());
+                sandwich.addSauce(side);
+            }
         }
 
         // Add the sandwich to the order
