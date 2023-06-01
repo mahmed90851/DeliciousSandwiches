@@ -23,22 +23,22 @@ public class ReceiptManager {
             writer.write(receiptContent);
             writer.close();
 
-            // Write the receipt content to the file
+            // Write the receipt to the file
             FileWriter fileWriter = new FileWriter(filePath);
             fileWriter.write(receiptContent);
             fileWriter.close();
             System.out.println("Receipt created: " + fileName);
         } catch (IOException e) {
-            System.out.println("Error creating receipt: " + e.getMessage());
+            System.out.println("Error creating receipt: " + fileName);
         }
     }
 
 
     private String generateFileName() {
         LocalDateTime now = LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd-hhmmss");
         String timestamp = now.format(formatter);
-        return "receipt_" + timestamp + ".txt";
+        return "receipt-" + timestamp + ".txt";
     }
 
 }
