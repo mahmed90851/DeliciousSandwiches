@@ -27,9 +27,9 @@ public class ReceiptManager {
             FileWriter fileWriter = new FileWriter(filePath);
             fileWriter.write(receiptContent);
             fileWriter.close();
-            System.out.println("Receipt created: " + fileName);
+            System.out.println(ColorCodes.TEXT_PURPLE+"Receipt created: "+ColorCodes.ANSI_RESET + fileName);
         } catch (IOException e) {
-            System.out.println("Error creating receipt: " + fileName);
+            System.out.println(ColorCodes.TEXT_RED+"Error creating receipt: "+ColorCodes.ANSI_RESET + fileName);
         }
     }
 
