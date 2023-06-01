@@ -62,9 +62,12 @@ public class OrderScreen {
 
 
         // Prompt the user for toppings
-        System.out.println("Select toppings (separate with comma, e.g., LETTUCE,TOMATOES): ");
+        System.out.println("Select toppings (separate with commas):");
+        System.out.println("Available meat toppings: Steak, Ham, Salami, Roast Beef, Chicken, Bacon");
+        System.out.println("Available toppings: Lettuce, Peppers, Onions, Tomatoes, Jalepenos, Cucumbers, Pickles, Guacamole, Mushrooms");
         String toppingsInput = scanner.nextLine();
         String[] toppingsArray = toppingsInput.split(",");
+
 
         // Prompt the user for sauces
         System.out.println("Select sauces (separate with comma, e.g., MAYO,MUSTARD): ");

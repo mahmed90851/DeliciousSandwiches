@@ -10,6 +10,12 @@ public class HomeScreen {
             System.out.println("1) Place a New Order");
             System.out.println("0) Exit");
             System.out.print("Enter your choice: ");
+
+            // Validate the input
+            while (!scanner.hasNextInt()) {
+                System.out.println("Invalid input. Please enter a valid choice.");
+                scanner.nextLine();
+            }
             int choice = scanner.nextInt();
             scanner.nextLine();
 
