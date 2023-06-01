@@ -17,8 +17,8 @@ The application aims to improve efficiency and enhance the customer experience a
 ### Home Screen 
 The home screen provides the following options:
 
- - Place a new order.
- - Exit.
+ - Place a new order: Start a new order
+ - Exit: Exit the Application
 
 The application continues to run until the user chooses to exit.
 
