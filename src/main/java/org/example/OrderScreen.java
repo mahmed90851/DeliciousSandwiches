@@ -66,10 +66,23 @@ public class OrderScreen {
         int sizeChoice = scanner.nextInt();
         scanner.nextLine();
 
+        //Display the available toppings
+        System.out.println("Available Toppings:");
+        for (Topping topping : Topping.values()) {
+            System.out.println("- " + topping.getName());
+        }
+
         // Prompt the user for toppings
         System.out.println("Select toppings (separate with comma, e.g., LETTUCE,TOMATOES): ");
         String toppingsInput = scanner.nextLine();
         String[] toppingsArray = toppingsInput.split(",");
+
+        // Display the available sauces
+        System.out.println("Available sauces:");
+        SauceType[] sauceTypes = SauceType.values();
+        for (int i = 0; i < sauceTypes.length; i++) {
+            System.out.println((i + 1) + ". " + sauceTypes[i].getName());
+        }
 
         // Prompt the user for sauces
         System.out.println("Select sauces (separate with comma, e.g., MAYO,MUSTARD): ");
