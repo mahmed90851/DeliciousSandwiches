@@ -2,16 +2,18 @@ package org.example;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sandwich {
+public class Sandwich implements OrderableItem {
     private Bread bread;
     private List<Topping> toppings;
-    private int size;
+    private List<Sauce> sauces;
+    private SandwichSize size;
     private boolean toasted;
 
-    public Sandwich(Bread bread, int size) {
+    public Sandwich(Bread bread, SandwichSize size) {
         this.bread = bread;
         this.size = size;
         this.toppings = new ArrayList<>();
+        this.sauces = new ArrayList<>();
         this.toasted = false;
     }
 
@@ -23,24 +25,32 @@ public class Sandwich {
         toppings.remove(topping);
     }
 
+    public void addSauce(Sauce sauce) {
+        sauces.add(sauce);
+    }
+
+    public void removeSauce(Sauce sauce) {
+        sauces.remove(sauce);
+    }
+
     public double getPrice() {
-        double total = bread.getPrice();
-
-        for (Topping topping : toppings) {
-            total += topping.getPrice();
-        }
-
-        return total;
+        return bread.getPrice();
     }
 
     public String getOrderDetails() {
         StringBuilder details = new StringBuilder();
-        details.append("Size: ").append(size).append("\"\n");
+        details.append("Size: ").append(size.getSize()).append("\"\n");
         details.append("Bread: ").append(bread.getName()).append("\n");
         details.append("Toppings: ").append("\n");
 
         for (Topping topping : toppings) {
             details.append("- ").append(topping.getName()).append("\n");
+        }
+
+        details.append("Sauces: ").append("\n");
+
+        for (Sauce sauce : sauces) {
+            details.append("- ").append(sauce.getName()).append("\n");
         }
 
         details.append("Toasted: ").append(toasted ? "Yes" : "No").append("\n");
