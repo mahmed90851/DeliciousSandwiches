@@ -56,13 +56,10 @@ public class OrderScreen {
 
         // Prompt the user for sandwich details
         System.out.println("Add Sandwich");
-        System.out.print("Select bread type (1. White, 2. Wheat, 3. Rye, 4. Wrap): ");
-        int breadChoice = scanner.nextInt();
-        scanner.nextLine();
+        int breadChoice = validateInput(scanner, "Select bread type (1. White, 2. Wheat, 3. Rye, 4. Wrap): ");
 
-        System.out.print("Enter sandwich size (4, 8, or 12 inches): ");
-        int sizeChoice = scanner.nextInt();
-        scanner.nextLine();
+        int sizeChoice =validateInput(scanner,"Enter sandwich size (4, 8, or 12 inches): ");
+
 
         // Prompt the user for toppings
         System.out.println("Select toppings (separate with comma, e.g., LETTUCE,TOMATOES): ");
@@ -74,10 +71,12 @@ public class OrderScreen {
         String saucesInput = scanner.nextLine();
         String[] saucesArray = saucesInput.split(",");
 
+
+
         // Create a new Sandwich object
         BreadType breadType;
         switch (breadChoice) {
-            case 1:
+            case 1 :
                 breadType = BreadType.WHITE;
                 break;
             case 2:
@@ -343,5 +342,18 @@ public class OrderScreen {
         receiptManager.createReceipt(receiptContent);
 
         System.exit(0);
+
+    }
+    private int validateInput(Scanner scanner, String message) {
+        System.out.print(message);
+
+        while (!scanner.hasNextInt()) {
+            System.out.println("Invalid input. Please enter a valid choice.");
+            scanner.nextLine();
+        }
+
+        int choice = scanner.nextInt();
+        scanner.nextLine();
+        return choice;
     }
 }

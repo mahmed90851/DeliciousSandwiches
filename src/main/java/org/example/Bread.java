@@ -4,6 +4,9 @@ public class Bread {
     private String name;
     private double price;
 
+    public Bread(BreadType breadType) {
+    }
+
     public String getName() {
         return name;
     }
