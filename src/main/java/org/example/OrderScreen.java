@@ -20,36 +20,38 @@ public class OrderScreen {
             System.out.println("2) Add Drink");
             System.out.println("3) Add Chips");
             System.out.println("4) Checkout");
+            System.out.println("5) Return to Home Screen");
             System.out.println("0) Cancel Order");
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
             scanner.nextLine();
 
             switch (choice) {
-                case 1:
+                case 1 ->
                     // Call the method to add a sandwich to the order
-                    addSandwich();
-                    break;
-                case 2:
+                        addSandwich();
+                case 2 ->
                     // Call the method to add a drink to the order
-                    addDrink();
-                    break;
-                case 3:
+                        addDrink();
+                case 3 ->
                     // Call the method to add chips to the order
-                    addChips();
-                    break;
-                case 4:
+                        addChips();
+                case 4 ->
                     // Call the method to proceed to checkout
-                    checkout();
-                    break;
-                case 0:
+                        checkout();
+                case 5 -> {
+                    System.out.println("Returning to Home Screen.");
+                    return; // Return to Home Screen
+                }
+                case 0 -> {
                     System.out.println("Order canceled.");
-                    return;
-                default:
-                    System.out.println("Invalid choice. Please try again.");
+                    return; // Cancel Order
+                }
+                default -> System.out.println("Invalid choice. Please try again.");
             }
         }
     }
+
 
     private void addSandwich() {
         Scanner scanner = new Scanner(System.in);
@@ -74,108 +76,64 @@ public class OrderScreen {
         String saucesInput = scanner.nextLine();
         String[] saucesArray = saucesInput.split(",");
 
+        // Prompt the user if they want the sandwich toasteds
+        System.out.println("Would you like the sandwich to be toasted? (Yes/No): ");
+        String toastedChoice = scanner.nextLine();
+        boolean toasted = toastedChoice.equalsIgnoreCase("yes");
+
         // Create a new Sandwich object
         BreadType breadType;
         switch (breadChoice) {
-            case 1:
-                breadType = BreadType.WHITE;
-                break;
-            case 2:
-                breadType = BreadType.WHEAT;
-                break;
-            case 3:
-                breadType = BreadType.RYE;
-                break;
-            case 4:
-                breadType = BreadType.WRAP;
-                break;
-            default:
+            case 1 -> breadType = BreadType.WHITE;
+            case 2 -> breadType = BreadType.WHEAT;
+            case 3 -> breadType = BreadType.RYE;
+            case 4 -> breadType = BreadType.WRAP;
+            default -> {
                 System.out.println("Invalid bread choice. Sandwich not added.");
                 return;
+            }
         }
         Bread bread = new Bread(breadType.getName(), breadType.getPrice());
 
         SandwichSize sandwichSize;
         switch (sizeChoice) {
-            case 4:
-                sandwichSize = SandwichSize.FOUR_INCH;
-                break;
-            case 8:
-                sandwichSize = SandwichSize.EIGHT_INCH;
-                break;
-            case 12:
-                sandwichSize = SandwichSize.TWELVE_INCH;
-                break;
-            default:
+            case 4 -> sandwichSize = SandwichSize.FOUR_INCH;
+            case 8 -> sandwichSize = SandwichSize.EIGHT_INCH;
+            case 12 -> sandwichSize = SandwichSize.TWELVE_INCH;
+            default -> {
                 System.out.println("Invalid size choice. Sandwich not added.");
                 return;
+            }
         }
         Sandwich sandwich = new Sandwich(bread, sandwichSize);
-
+        sandwich.setToasted(toasted);
         // Add toppings to the sandwich
         for (String toppingName : toppingsArray) {
             Topping topping;
             switch (toppingName.toUpperCase()) {
-                case "LETTUCE":
-                    topping = Topping.LETTUCE;
-                    break;
-                case "PEPPERS":
-                    topping = Topping.PEPPERS;
-                    break;
-                case "ONIONS":
-                    topping = Topping.ONIONS;
-                    break;
-                case "TOMATOES":
-                    topping = Topping.TOMATOES;
-                    break;
-                case "JALEPENOS":
-                    topping = Topping.JALEPENOS;
-                    break;
-                case "CUCUMBERS":
-                    topping = Topping.CUCUMBERS;
-                    break;
-                case "PICKLES":
-                    topping = Topping.PICKLES;
-                    break;
-                case "GUACAMOLE":
-                    topping = Topping.GUACAMOLE;
-                    break;
-                case "MUSHROOMS":
-                    topping = Topping.MUSHROOMS;
-                    break;
-                case "STEAK":
-                    topping = Topping.STEAK;
-                    break;
-                case "HAM":
-                    topping = Topping.HAM;
-                    break;
-                case "SALAMI":
-                    topping = Topping.SALAMI;
-                    break;
-                case "ROAST BEEF":
-                    topping = Topping.ROAST_BEEF;
-                    break;
-                case "CHICKEN":
-                    topping = Topping.CHICKEN;
-                    break;
-                case "BACON":
-                    topping = Topping.BACON;
-                    break;
-                case "AMERICAN CHEESE":
-                    topping = Topping.AMERICAN_CHEESE;
-                    break;
-                case "PROVOLONE CHEESE":
-                    topping = Topping.PROVOLONE_CHEESE;
-                    break;
-                case "CHEDDAR CHEESE":
-                    topping = Topping.CHEDDAR_CHEESE;
-                    break;
-                case "SWISS CHEESE":
-                    topping = Topping.SWISS_CHEESE;
-                    break;
-                default:
+                case "LETTUCE" -> topping = Topping.LETTUCE;
+                case "PEPPERS" -> topping = Topping.PEPPERS;
+                case "ONIONS" -> topping = Topping.ONIONS;
+                case "TOMATOES" -> topping = Topping.TOMATOES;
+                case "JALEPENOS" -> topping = Topping.JALEPENOS;
+                case "CUCUMBERS" -> topping = Topping.CUCUMBERS;
+                case "PICKLES" -> topping = Topping.PICKLES;
+                case "GUACAMOLE" -> topping = Topping.GUACAMOLE;
+                case "MUSHROOMS" -> topping = Topping.MUSHROOMS;
+                case "STEAK" -> topping = Topping.STEAK;
+                case "HAM" -> topping = Topping.HAM;
+                case "SALAMI" -> topping = Topping.SALAMI;
+                case "ROAST BEEF" -> topping = Topping.ROAST_BEEF;
+                case "CHICKEN" -> topping = Topping.CHICKEN;
+                case "BACON" -> topping = Topping.BACON;
+                case "AMERICAN CHEESE" -> topping = Topping.AMERICAN_CHEESE;
+                case "PROVOLONE CHEESE" -> topping = Topping.PROVOLONE_CHEESE;
+                case "CHEDDAR CHEESE" -> topping = Topping.CHEDDAR_CHEESE;
+                case "SWISS CHEESE" -> topping = Topping.SWISS_CHEESE;
+                default -> {
                     System.out.println("Invalid topping choice: " + toppingName);
                     continue;
+                }
             }
             sandwich.addTopping(topping);
         }
@@ -184,27 +142,16 @@ public class OrderScreen {
         for (String sauceName : saucesArray) {
             SauceType sauceType;
             switch (sauceName.toUpperCase()) {
-                case "MAYO":
-                    sauceType = SauceType.MAYO;
-                    break;
-                case "MUSTARD":
-                    sauceType = SauceType.MUSTARD;
-                    break;
-                case "KETCHUP":
-                    sauceType = SauceType.KETCHUP;
-                    break;
-                case "RANCH":
-                    sauceType = SauceType.RANCH;
-                    break;
-                case "THOUSAND ISLANDS":
-                    sauceType = SauceType.THOUSAND_ISLANDS;
-                    break;
-                case "VINAIGRETTE":
-                    sauceType = SauceType.VINAIGRETTE;
-                    break;
-                default:
+                case "MAYO" -> sauceType = SauceType.MAYO;
+                case "MUSTARD" -> sauceType = SauceType.MUSTARD;
+                case "KETCHUP" -> sauceType = SauceType.KETCHUP;
+                case "RANCH" -> sauceType = SauceType.RANCH;
+                case "THOUSAND ISLANDS" -> sauceType = SauceType.THOUSAND_ISLANDS;
+                case "VINAIGRETTE" -> sauceType = SauceType.VINAIGRETTE;
+                default -> {
                     System.out.println("Invalid sauce choice: " + sauceName);
                     continue;
+                }
             }
             Sauce sauce = new Sauce(sauceType.getName());
             sandwich.addSauce(sauce);
@@ -215,8 +162,6 @@ public class OrderScreen {
 
         System.out.println("Sandwich added to the order.");
     }
-
-
 
 
     private void addDrink() {
@@ -235,24 +180,15 @@ public class OrderScreen {
         // Create a new Drink object
         DrinkType type;
         switch (typeChoice) {
-            case 1:
-                type = DrinkType.SODA;
-                break;
-            case 2:
-                type = DrinkType.WATER;
-                break;
-            case 3:
-                type = DrinkType.JUICE;
-                break;
-            case 4:
-                type = DrinkType.TEA;
-                break;
-            case 5:
-                type = DrinkType.COFFEE;
-                break;
-            default:
+            case 1 -> type = DrinkType.SODA;
+            case 2 -> type = DrinkType.WATER;
+            case 3 -> type = DrinkType.JUICE;
+            case 4 -> type = DrinkType.TEA;
+            case 5 -> type = DrinkType.COFFEE;
+            default -> {
                 System.out.println("Invalid type choice. Drink not added.");
                 return;
+            }
         }
 
         DrinkSize size;
@@ -280,7 +216,6 @@ public class OrderScreen {
     }
 
 
-
     private void addChips() {
         Scanner scanner = new Scanner(System.in);
 
@@ -293,27 +228,16 @@ public class OrderScreen {
         // Create a new Chips object
         ChipType chipType;
         switch (chipChoice) {
-            case 1:
-                chipType = ChipType.REGULAR;
-                break;
-            case 2:
-                chipType = ChipType.BBQ;
-                break;
-            case 3:
-                chipType = ChipType.SOUR_CREAM_AND_ONION;
-                break;
-            case 4:
-                chipType = ChipType.SALTED;
-                break;
-            case 5:
-                chipType = ChipType.CHEESE;
-                break;
-            case 6:
-                chipType = ChipType.SPICY;
-                break;
-            default:
+            case 1 -> chipType = ChipType.REGULAR;
+            case 2 -> chipType = ChipType.BBQ;
+            case 3 -> chipType = ChipType.SOUR_CREAM_AND_ONION;
+            case 4 -> chipType = ChipType.SALTED;
+            case 5 -> chipType = ChipType.CHEESE;
+            case 6 -> chipType = ChipType.SPICY;
+            default -> {
                 System.out.println("Invalid chip choice. Chips not added.");
                 return;
+            }
         }
         Chip chips = new Chip(chipType);
 
@@ -323,7 +247,7 @@ public class OrderScreen {
         System.out.println("Chips added to the order.");
     }
 
-    private void checkout() {
+    public boolean checkout() {
         System.out.println("Checkout");
         System.out.println("Order Details:");
 
@@ -336,12 +260,25 @@ public class OrderScreen {
 
         System.out.println("Thank you for your order!");
 
-        String folderPath = "ReceiptsFolder";
-        String receiptContent = order.getReceipt(); // Replace with the actual receipt content
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Confirm your order (Y/N): ");
+        String confirmation = scanner.nextLine();
 
-        ReceiptManager receiptManager = new ReceiptManager(folderPath);
-        receiptManager.createReceipt(receiptContent);
+        if (confirmation.equalsIgnoreCase("Y")) {
+            String folderPath = "ReceiptsFolder";
+            String receiptContent = order.getReceipt(); // Replace with the actual receipt content
 
-        System.exit(0);
+            ReceiptManager receiptManager = new ReceiptManager(folderPath);
+            receiptManager.createReceipt(receiptContent);
+
+            // Clear the order for the next transaction
+            order.clear();
+
+             // Checkout successful
+        } else {
+            System.out.println("Order canceled.");
+            return false; // Checkout canceled
+        }
+        return true;
     }
 }

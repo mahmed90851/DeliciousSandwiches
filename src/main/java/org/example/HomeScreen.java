@@ -18,7 +18,23 @@ public class HomeScreen {
                     Order order = new Order();
                     OrderScreen orderScreen = new OrderScreen(order);
                     orderScreen.display();
-                    break;
+
+                    if (order.getItems().isEmpty()) {
+                        // No items in the order, go back to the Home Screen
+                        System.out.println("Order canceled or no items added. Returning to Home Screen.");
+                        break;
+                    }
+
+                    boolean checkoutSuccessful = orderScreen.checkout();
+                    if (checkoutSuccessful) {
+                        // Continue the loop and show the Home Screen
+                        break;
+                    } else {
+                        // Exit the application
+                        System.out.println("Exiting the application. Goodbye!");
+                        return;
+                    }
+
                 case 0:
                     System.out.println("Exiting the application. Goodbye!");
                     return;

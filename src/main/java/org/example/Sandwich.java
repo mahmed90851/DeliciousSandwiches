@@ -34,8 +34,16 @@ public class Sandwich implements OrderableItem {
     }
 
     public double getPrice() {
-        return bread.getPrice();
+        double totalPrice = bread.getPrice();
+
+        for (Topping topping : toppings) {
+            totalPrice += topping.getPrice(size);
+        }
+
+        return totalPrice;
     }
+
+
 
     public String getOrderDetails() {
         StringBuilder details = new StringBuilder();
