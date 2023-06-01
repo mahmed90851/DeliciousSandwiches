@@ -70,7 +70,8 @@ public class OrderScreen {
 
 
         // Prompt the user for sauces
-        System.out.println("Select sauces (separate with comma, e.g., MAYO,MUSTARD): ");
+        System.out.println("Select sauces (separate with commas):");
+        System.out.println("Available sauces: Mayo, Mustard, Ketchup, Ranch, Thousand Islands, Vinaigrette");
         String saucesInput = scanner.nextLine();
         String[] saucesArray = saucesInput.split(",");
 
