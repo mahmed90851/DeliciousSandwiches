@@ -1,14 +1,14 @@
 package org.example;
 
 public enum DrinkSize {
-    SMALL(2.00, 8),
-    MEDIUM(2.50, 12),
-    LARGE(3.00, 16);
+    SMALL(2.00, "small"),
+    MEDIUM(2.50, "medium"),
+    LARGE(3.00, "large");
 
     private final double price;
-    private final int size;
+    private final String size;
 
-    DrinkSize(double price, int size) {
+    DrinkSize(double price, String size) {
         this.price = price;
         this.size = size;
     }
@@ -17,7 +17,7 @@ public enum DrinkSize {
         return price;
     }
 
-    public int getSize() {
+    public String getSize() {
         return size;
     }
 }
