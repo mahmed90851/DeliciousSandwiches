@@ -29,34 +29,37 @@ The order screen displays the entries in reverse chronological order (newest ent
 - Add Drink: Add a drink to the order.
 - Add Chips: Add chips to the order.
 - Checkout: Proceed to the checkout screen.
+- Return to Home Screen.
 - Cancel Order: Delete the current order and go back to the home screen.
-
-![Screen Shot 2023-05-31 at 7.34.06 PM.png](Screen%20Shot%202023-05-31%20at%207.34.06%20PM.png)
+![Screen Shot 2023-06-01 at 3.34.10 PM.png](Screen%20Shot%202023-06-01%20at%203.34.10%20PM.png)
 ### Sandwich Screen
 The add sandwich screen guides the user through the process of creating a customized sandwich. The following options are available:
 
 - Select your bread:
 - Sandwich size:
 - Toppings (with the ability to add extras for each topping category):
-
-![Screen Shot 2023-05-31 at 7.35.08 PM.png](Screen%20Shot%202023-05-31%20at%207.35.08%20PM.png)
+- Select sauces:
+![Screen Shot 2023-06-01 at 3.48.55 PM.png](Screen%20Shot%202023-06-01%20at%203.48.55%20PM.png)
+![Screen Shot 2023-06-01 at 3.54.48 PM.png](Screen%20Shot%202023-06-01%20at%203.54.48%20PM.png)
+![Screen Shot 2023-06-01 at 3.56.02 PM.png](Screen%20Shot%202023-06-01%20at%203.56.02%20PM.png)
 ### Drink Screen
 The drink screen allows the user to select the drink size and flavor.
+![Screen Shot 2023-06-01 at 3.56.31 PM.png](Screen%20Shot%202023-06-01%20at%203.56.31%20PM.png)
 
-![Screen Shot 2023-05-31 at 7.36.04 PM.png](Screen%20Shot%202023-05-31%20at%207.36.04%20PM.png)
 ### Chip Screen
 The chips screen enables the user to select the type of chips.
-
-![Screen Shot 2023-05-31 at 7.36.54 PM.png](Screen%20Shot%202023-05-31%20at%207.36.54%20PM.png)
+![Screen Shot 2023-06-01 at 3.56.58 PM.png](Screen%20Shot%202023-06-01%20at%203.56.58%20PM.png)
 
 ### Checkout Screen
 The checkout screen displays the order details, including the list of sandwiches with toppings and the total price.
-
-![Screen Shot 2023-05-31 at 7.37.33 PM.png](Screen%20Shot%202023-05-31%20at%207.37.33%20PM.png)
+![Screen Shot 2023-06-01 at 3.40.54 PM.png](Screen%20Shot%202023-06-01%20at%203.40.54%20PM.png)
 
 ### Receipt Screen
+![Screen Shot 2023-06-01 at 4.02.02 PM.png](Screen%20Shot%202023-06-01%20at%204.02.02%20PM.png)
 
 
+### Exiting the Application
+![Screen Shot 2023-06-01 at 4.04.19 PM.png](Screen%20Shot%202023-06-01%20at%204.04.19%20PM.png)
 ### One interesting of piece code from the project :
         //
 

@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3292681e-fe85-4824-b3d7-1b8d05f60ae8" name="Changes" comment="added ColorCodes class" />
+    <list default="true" id="3292681e-fe85-4824-b3d7-1b8d05f60ae8" name="Changes" comment="added ColorCodes class">
+      <change afterPath="$PROJECT_DIR$/Screen Shot 2023-06-01 at 3.13.51 PM 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Screen Shot 2023-06-01 at 3.34.10 PM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Screen Shot 2023-06-01 at 3.40.54 PM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Screen Shot 2023-06-01 at 3.48.55 PM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Screen Shot 2023-06-01 at 3.54.48 PM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Screen Shot 2023-06-01 at 3.56.02 PM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Screen Shot 2023-06-01 at 3.56.31 PM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Screen Shot 2023-06-01 at 3.56.58 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screen Shot 2023-05-31 at 7.34.06 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screen Shot 2023-05-31 at 7.35.08 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screen Shot 2023-05-31 at 7.36.04 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screen Shot 2023-05-31 at 7.36.54 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screen Shot 2023-05-31 at 7.37.33 PM.png" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -157,8 +173,26 @@
       <option name="project" value="LOCAL" />
       <updated>1685646799385</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added ColorCodes class">
+      <created>1685647101488</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1685647101488</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial code" />
