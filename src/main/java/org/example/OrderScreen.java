@@ -327,15 +327,12 @@ public class OrderScreen {
         System.out.println("Checkout");
         System.out.println("Order Details:");
 
-        // Debugging statements
         System.out.println("Number of items in the order: " + order.getItems().size());
         for (OrderableItem item : order.getItems()) {
             System.out.println(item.getOrderDetails());
         }
 
         System.out.printf("Total Price: $%.2f%n", order.getTotalPrice());
-
-        // Perform any additional checkout logic, such as payment processing or generating a receipt file
 
         System.out.println("Thank you for your order!");
 
