@@ -1,0 +1,204 @@
+Index: src/main/java/org/example/UserInterface.java
+===================================================================
+diff --git a/src/main/java/org/example/UserInterface.java b/src/main/java/org/example/UserInterface.java
+deleted file mode 100644
+--- a/src/main/java/org/example/UserInterface.java	(revision a4c25b941ae4ad662fa7d5dd19d1c61b5425f17a)
++++ /dev/null	(revision a4c25b941ae4ad662fa7d5dd19d1c61b5425f17a)
+@@ -1,136 +0,0 @@
+-package org.example;
+-
+-import java.util.Scanner;
+-
+-public class UserInterface {
+-    private Scanner scanner;
+-
+-    public UserInterface() {
+-        scanner = new Scanner(System.in);
+-    }
+-
+-    public void displayHomeScreen() {
+-        System.out.println("Welcome to DELI-cious!");
+-        System.out.println("1) New Order");
+-        System.out.println("0) Exit");
+-    }
+-
+-    public void displayOrderScreen() {
+-        System.out.println("Order Screen:");
+-        System.out.println("1) Add Sandwich");
+-        System.out.println("2) Add Drink");
+-        System.out.println("3) Add Chips");
+-        System.out.println("4) Checkout");
+-        System.out.println("0) Cancel Order");
+-    }
+-
+-    public void displayAddSandwichScreen() {
+-        System.out.println("Add Sandwich:");
+-        System.out.println("Select your bread:");
+-        // Display bread options
+-        System.out.println("Select sandwich size:");
+-        // Display size options
+-        System.out.println("Select toppings:");
+-        // Display topping options
+-        System.out.println("Select sauces:");
+-        // Display sauce options
+-        System.out.println("Would you like the sandwich toasted? (Y/N)");
+-    }
+-
+-    public void displayAddDrinkScreen() {
+-        System.out.println("Add Drink:");
+-        System.out.println("Select drink size:");
+-        // Display size options
+-        System.out.println("Select drink flavor:");
+-        // Display flavor options
+-    }
+-
+-    public void displayAddChipsScreen() {
+-        System.out.println("Add Chips:");
+-        // Display chip options
+-    }
+-
+-    public void displayCheckoutScreen(double totalPrice, String orderDetails) {
+-        System.out.println("Checkout:");
+-        System.out.println("Order Details:");
+-        System.out.println(orderDetails);
+-        System.out.println("Total Price: $" + totalPrice);
+-        System.out.println("1) Confirm");
+-        System.out.println("2) Cancel");
+-    }
+-
+-    public int getInput() {
+-        return scanner.nextInt();
+-    }
+-
+-    public void handleUserInput(int input) {
+-        switch (input) {
+-            case 0:
+-                System.out.println("Exiting the application. Goodbye!");
+-                break;
+-            case 1:
+-                displayOrderScreen();
+-                int orderInput = getInput();
+-                handleOrderInput(orderInput);
+-                break;
+-            default:
+-                System.out.println("Invalid input. Please try again.");
+-                break;
+-        }
+-    }
+-
+-    public void handleOrderInput(int input) {
+-        switch (input) {
+-            case 0:
+-                System.out.println("Order cancelled.");
+-                displayHomeScreen();
+-                break;
+-            case 1:
+-                displayAddSandwichScreen();
+-                int sandwichInput = getInput();
+-                // Handle add sandwich input
+-                break;
+-            case 2:
+-                displayAddDrinkScreen();
+-                int drinkInput = getInput();
+-                // Handle add drink input
+-                break;
+-            case 3:
+-                displayAddChipsScreen();
+-                int chipsInput = getInput();
+-                // Handle add chips input
+-                break;
+-            case 4:
+-                double totalPrice = 0.0; // Calculate the total price
+-                String orderDetails = ""; // Generate the order details
+-                displayCheckoutScreen(totalPrice, orderDetails);
+-                int checkoutInput = getInput();
+-                handleCheckoutInput(checkoutInput);
+-                break;
+-            default:
+-                System.out.println("Invalid input. Please try again.");
+-                break;
+-        }
+-    }
+-
+-    public void handleCheckoutInput(int input) {
+-        switch (input) {
+-            case 1:
+-                System.out.println("Order confirmed. Thank you!");
+-                displayHomeScreen();
+-                break;
+-            case 2:
+-                System.out.println("Order cancelled.");
+-                displayHomeScreen();
+-                break;
+-            default:
+-                System.out.println("Invalid input. Please try again.");
+-                displayCheckoutScreen(totalPrice, orderDetails);
+-                break;
+-        }
+-    }
+-
+-    public void closeScanner() {
+-        scanner.close();
+-    }
+-}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"3292681e-fe85-4824-b3d7-1b8d05f60ae8\" name=\"Changes\" comment=\"updated code\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Merge.Settings\">\n    <option name=\"BRANCH\" value=\"origin/SauceClasses\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MavenImportPreferences\">\n    <option name=\"importingSettings\">\n      <MavenImportingSettings>\n        <option name=\"workspaceImportEnabled\" value=\"true\" />\n      </MavenImportingSettings>\n    </option>\n  </component>\n  <component name=\"ProjectId\" id=\"2QW3GesJiBQIKVSHEy0RbKCV8yJ\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n    <option name=\"showMembers\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;\n  }\n}</component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"3292681e-fe85-4824-b3d7-1b8d05f60ae8\" name=\"Changes\" comment=\"\" />\n      <created>1685455418790</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1685455418790</updated>\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"updated code\">\n      <created>1685470334267</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1685470334268</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"2\" />\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"updated code\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"updated code\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 621cbc9f8f41c8ed6fdccb06c23794dc3d9dec63)
++++ b/.idea/workspace.xml	(date 1685537082032)
+@@ -4,11 +4,33 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="3292681e-fe85-4824-b3d7-1b8d05f60ae8" name="Changes" comment="updated code" />
++    <list default="true" id="3292681e-fe85-4824-b3d7-1b8d05f60ae8" name="Changes" comment="updated code">
++      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Chip.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ChipType.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/DrinkSize.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/DrinkType.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Order.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Receipt.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Sandwich.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Size.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/UserInterface.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Drink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Drink.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Sauce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Sauce.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SauceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SauceType.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Topping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Topping.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ToppingCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ToppingType.java" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Class" />
++      </list>
++    </option>
+   </component>
+   <component name="Git.Merge.Settings">
+     <option name="BRANCH" value="origin/SauceClasses" />
+@@ -52,7 +74,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1685470334268</updated>
+     </task>
+-    <option name="localTasksCounter" value="2" />
++    <task id="LOCAL-00002" summary="updated code">
++      <created>1685470471099</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1685470471099</updated>
++    </task>
++    <option name="localTasksCounter" value="3" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
