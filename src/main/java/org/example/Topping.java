@@ -22,12 +22,12 @@ public enum Topping {
     SWISS_CHEESE("Swiss Cheese", 0.75, ToppingType.PREMIUM);
 
     private String name;
-    private double price;
+    private double basePrice;
     private ToppingType type;
 
-    Topping(String name, double price, ToppingType type) {
+    Topping(String name, double basePrice, ToppingType type) {
         this.name = name;
-        this.price = price;
+        this.basePrice = basePrice;
         this.type = type;
     }
 
@@ -35,7 +35,13 @@ public enum Topping {
         return name;
     }
 
-    public double getPrice() {
+    public double getPrice(SandwichSize size) {
+        double price = basePrice;
+        if (size == SandwichSize.EIGHT_INCH) {
+            price *= 2.0;
+        } else if (size == SandwichSize.TWELVE_INCH) {
+            price *= 3.0;
+        }
         return price;
     }
 
