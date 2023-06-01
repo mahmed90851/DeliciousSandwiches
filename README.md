@@ -18,7 +18,7 @@ The application aims to improve efficiency and enhance the customer experience a
 The home screen provides the following options:
 
  - Place a new order.
- - Exit .
+ - Exit.
 
 The application continues to run until the user chooses to exit.
 
@@ -62,6 +62,6 @@ The checkout screen displays the order details, including the list of sandwiches
 
 
 How to Run the Application
-Clone the repository: git clone https://github.com/mahmed90851/DeliciousSandwiches.git
+Clone the repository: https://github.com/mahmed90851/DeliciousSandwiches.git
 
 Run the application: IntelliJ 
