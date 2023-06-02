@@ -10,7 +10,7 @@ The DELI-cious Sandwiches Application is a simple application designed for a cus
 
 Customers can choose the size of their sandwich (4", 8", or 12") and select from different bread types (white, wheat, rye, or wrap). They can customize their sandwich by adding regular toppings like lettuce, peppers, onions, tomatoes, and more, as well as other toppings such as meats and cheeses (e.g., steak, ham, cheddar, swiss). Extra toppings come at an additional cost.
 
-Additionally, customers can specify if they want their sandwich toasted and add drinks and chips to their order. Once the order is completed, the application displays the order details, including the list of sandwiches with toppings and the total cost. The order details are saved as a receipt file with a timestamp in the receipts folder.
+Additionally, customers can specify if they want their sandwich toasted and add drinks and chips to their order. Once the order is completed, the application displays the order details, including the list of sandwiches with toppings and the total cost. The order details are saved as a receipt file with a timestamp in the receipts' folder.
 
 ### Home Screen
 The home screen provides the following options:
