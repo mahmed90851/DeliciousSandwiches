@@ -21,16 +21,8 @@ public class Sandwich implements OrderableItem {
         toppings.add(topping);
     }
 
-    public void removeTopping(Topping topping) {
-        toppings.remove(topping);
-    }
-
     public void addSauce(Sauce sauce) {
         sauces.add(sauce);
-    }
-
-    public void removeSauce(Sauce sauce) {
-        sauces.remove(sauce);
     }
 
     public double getPrice() {
