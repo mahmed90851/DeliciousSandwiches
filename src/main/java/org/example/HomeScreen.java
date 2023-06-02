@@ -1,4 +1,5 @@
 package org.example;
+
 import java.util.Scanner;
 
 public class HomeScreen {
@@ -6,10 +7,11 @@ public class HomeScreen {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println("Welcome to DELI-cious!");
-            System.out.println("1) Place a New Order");
-            System.out.println("0) Exit");
-            System.out.print("Enter your choice: ");
+            System.out.println(ColorCodes.ANSI_PINK +"\n=*=*=*=*=*=*=*=*=*=*=*=*=* Welcome to DELI-cious! *=*=*=*=*=*=*=*=*=*=*=*=*=* \n"+ColorCodes.ANSI_RESET);
+            System.out.println(ColorCodes.ORANGE+"1) Place a New Order");
+
+            System.out.println("0) Exit"+ColorCodes.ANSI_RESET);
+            System.out.print(ColorCodes.ANSI_YELLOW+"\nEnter your choice: "+ColorCodes.ANSI_RESET);
             int choice = scanner.nextInt();
             scanner.nextLine();
 
@@ -21,7 +23,7 @@ public class HomeScreen {
 
                     if (order.getItems().isEmpty()) {
                         // No items in the order, go back to the Home Screen
-                        System.out.println("Order canceled or no items added. Returning to Home Screen.");
+                        System.out.println(ColorCodes.GREEN+"Order canceled or no items added. Returning to Home Screen."+ColorCodes.ANSI_RESET);
                         break;
                     }
 
@@ -31,15 +33,14 @@ public class HomeScreen {
                         break;
                     } else {
                         // Exit the application
-                        System.out.println("Exiting the application. Goodbye!");
+                        System.out.println(ColorCodes.GREEN+"Exiting the application. Goodbye!"+ColorCodes.ANSI_RESET);
                         return;
                     }
-
                 case 0:
-                    System.out.println("Exiting the application. Goodbye!");
+                    System.out.println(ColorCodes.GREEN+"Exiting the application... Goodbye!"+ColorCodes.ANSI_RESET);
                     return;
                 default:
-                    System.out.println("Invalid choice. Please try again.");
+                    System.out.println(ColorCodes.GREEN+"Invalid choice. Please try again."+ColorCodes.ANSI_RESET);
             }
         }
     }
